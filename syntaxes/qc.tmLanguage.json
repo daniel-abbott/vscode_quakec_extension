@@ -1,0 +1,102 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "QuakeC",
+	"patterns": [
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#storage"
+		},
+		{
+			"include": "#support"
+		},
+		{
+			"include": "#constants"
+		},
+		{
+			"include": "#variables"
+		}
+	],
+	"repository": {
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.line.double-slash",
+					"match": "\/\/.*$"
+				},
+				{
+					"name": "comment.block",
+					"begin": "(\/\\*)",
+					"end": "(\\*\/)"
+				}
+			]
+		},
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.qc",
+					"match": "\\b(if|else|while|for|return)\\b"
+				},
+				{
+					"name": "keyword.operator.qc",
+					"match": ""
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.qc",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.qc",
+					"match": "\\\\."
+				}
+			]
+		},
+		"storage": {
+			"patterns": [
+				{
+					"name": "storage.modifier",
+					"match": "\\b(local)\\b"
+				}
+			]
+		},
+		"support": {
+			"patterns": [
+				{
+					"name": "support.function",
+					"match": "\\b(dprint)\\b"
+				}
+			]
+		},
+		"constants": {
+			"patterns": [
+				{
+					"name": "constant.numeric",
+					"match": "\\d"
+				},
+				{
+					"name": "constant.language",
+					"match": "\\b(TRUE|FALSE)\\b"
+				}
+			]
+		},
+		"variables": {
+			"patterns": [
+				{
+					"name": "variable.language",
+					"match": "\\b(self)\\b"
+				}
+			]
+		}
+	},
+	"scopeName": "source.qc"
+}

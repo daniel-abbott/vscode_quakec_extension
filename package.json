@@ -1,0 +1,25 @@
+{
+    "name": "quakec",
+    "displayName": "QuakeC",
+    "description": "",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.33.1"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "qc",
+            "aliases": ["QuakeC", "qc"],
+            "extensions": [".qc"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "qc",
+            "scopeName": "source.qc",
+            "path": "./syntaxes/qc.tmLanguage.json"
+        }]
+    }
+}
