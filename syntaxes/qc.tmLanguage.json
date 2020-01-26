@@ -22,17 +22,20 @@
 		},
 		{
 			"include": "#variables"
+		},
+		{
+			"include": "#entities"
 		}
 	],
 	"repository": {
 		"comments": {
 			"patterns": [
 				{
-					"name": "comment.line.double-slash",
+					"name": "comment.line.double-slash.qc",
 					"match": "\/\/.*$"
 				},
 				{
-					"name": "comment.block",
+					"name": "comment.block.qc",
 					"begin": "(\/\\*)",
 					"end": "(\\*\/)"
 				}
@@ -42,11 +45,15 @@
 			"patterns": [
 				{
 					"name": "keyword.control.qc",
-					"match": "\\b(if|else|while|for|return)\\b"
+					"match": "\\b(if|else|switch|case|default|do|while|for|return)\\b"
 				},
 				{
 					"name": "keyword.operator.qc",
-					"match": ""
+					"match": "([()]|[\\[\\]]|[.]|[,]|[;]|[+]|[-]|[=]|[/]|[*]|[&]|[|])"
+				},
+				{
+					"name": "keyword.other.qc",
+					"match": "(\\$\\w+)"
 				}
 			]
 		},
@@ -64,27 +71,35 @@
 		"storage": {
 			"patterns": [
 				{
-					"name": "storage.modifier",
-					"match": "\\b(local)\\b"
+					"name": "storage.type.qc",
+					"match": "\\b(entity|float|string|vector|void)\\b"
+				},
+				{
+					"name": "storage.modifier.qc",
+					"match": "\\b(local|nosave)\\b"
 				}
 			]
 		},
 		"support": {
 			"patterns": [
 				{
-					"name": "support.function",
-					"match": "\\b(dprint)\\b"
+					"name": "support.function.qc",
+					"match": "\\b(cvar|cvar_set|dprint|sprint|fabs|floor|WriteByte|WriteString|WriteCoord|normalize|ftos)\\b"
+				},
+				{
+					"name": "support.type.qc",
+					"match": "\\b([A-Z]+_[A-Z]+_?[A-Z]*)\\b"
 				}
 			]
 		},
 		"constants": {
 			"patterns": [
 				{
-					"name": "constant.numeric",
-					"match": "\\d"
+					"name": "constant.numeric.qc",
+					"match": "\\b(\\d)+\\b"
 				},
 				{
-					"name": "constant.language",
+					"name": "constant.language.qc",
 					"match": "\\b(TRUE|FALSE)\\b"
 				}
 			]
@@ -92,8 +107,20 @@
 		"variables": {
 			"patterns": [
 				{
-					"name": "variable.language",
-					"match": "\\b(self)\\b"
+					"name": "variable.language.qc",
+					"match": "\\b(self|other|world|time|frametime)\\b"
+				},
+				{
+					"name": "variable.parameter.qc",
+					"match": "\\w"
+				}
+			]
+		},
+		"entities": {
+			"patterns": [
+				{
+					"name": "entity.name.tag.qc",
+					"match": "\\.(\\w+)"
 				}
 			]
 		}
