@@ -84,7 +84,7 @@
 			"patterns": [
 				{
 					"name": "support.function.qc",
-					"match": "\\b(makevectors|setorigin|setmodel|setsize|break|random|dprint|sound|normalize|error|objerror|vlen|vectoyaw|spawn|remove|traceline|checkclient|find|precache_sound|precache_model|stuffcmd|findradius|bprint|sprint|dprint|ftos|vtos|coredump|traceon|traceoff|eprint|movespeed|tetherlock|walkmove_builtin|walkmove|droptofloor|lightstyle|rint|floor|ceil|checkbottom|pointcontents|fabs|aim|cvar|localcmd|nextent|particle|ChangeYaw|vectoangles|WriteByte|WriteChar|WriteShort|WriteLong|WriteCoord|WriteAngle|WriteString|WriteEntity|movetogoal_builtin|movetogoal|precache_file|makestatic|changelevel|cvar_set|cvar_setlong|centerprint_builtin|centerprint_msg|centerprint|centerprint_msg3|centerprint3|centerprint_msg4|centerprint_msg7|centerprint7|ambientsound|precache_model2|precache_sound2|precache_file2|setspawnparms)\\b"
+					"match": "\\b(makevectors|setorigin|setmodel|setsize|break|random|dprint|sound|normalize|error|objerror|vlen|vectoyaw|spawn|remove|traceline|checkclient|find|precache_sound|precache_model|stuffcmd|findradius|bprint|sprint|dprint|ftos|vtos|coredump|traceon|traceoff|eprint|movespeed|tetherlock|walkmove_builtin|walkmove|droptofloor|lightstyle|rint|floor|ceil|checkbottom|pointcontents|fabs|aim|cvar|localcmd|nextent|particle|ChangeYaw|vectoangles|WriteByte|WriteChar|WriteShort|WriteLong|WriteCoord|WriteAngle|WriteString|WriteEntity|movetogoal_builtin|movetogoal|precache_file|makestatic|changelevel|cvar_set|cvar_setlong|centerprint|centerprint2|centerprint3|centerprint4|centerprint5|centerprint6|centerprint7|ambientsound|precache_model2|precache_sound2|precache_file2|setspawnparms)\\b"
 				},
 				{
 					"name": "support.type.qc",
